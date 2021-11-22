@@ -18,6 +18,11 @@ document.write(blues);
 // expression 
 document.write(5+2);
 
+A="Hello";
+B="there";
+document.write(A+B);
+
+
 
 
 
