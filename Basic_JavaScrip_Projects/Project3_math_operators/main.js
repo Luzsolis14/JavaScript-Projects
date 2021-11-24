@@ -32,4 +32,7 @@ document.write(X); //rounds down
 
 window.alert(Math.random()*100); // this gives you a random number from 0-100
 
+var X= 5;
+X++;
+document.write(X);
 
