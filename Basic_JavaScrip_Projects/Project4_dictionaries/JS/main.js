@@ -6,6 +6,6 @@ function my_Dictionary () {
         Age:5,
         Sound:"Bark!"
     };
-    delete Animal.Sound;
+    delete Animal.Sound; // this will delete it 
     document.getElementById("Dictionary").innerHTML = Animal.Sound;
 }
