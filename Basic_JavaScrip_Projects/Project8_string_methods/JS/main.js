@@ -20,5 +20,5 @@ function string_Method() { // string method
 
 function precision_Method() {
     var X = 12938.3012987376112;
-    document.getElementById("Percision").innerHTML = X.toPrecision(10);
+    document.getElementById("Precision").innerHTML = X.toPrecision(10);
 }
