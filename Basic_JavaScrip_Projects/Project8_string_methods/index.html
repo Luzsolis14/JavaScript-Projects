@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="UTF_8">
+    <title>Project 8</title>
+    
+<head>
+    <body>
+        <script src="./JS/main.js"></script>
+
+        <p id="Concatenate"></p>
+        <button onclick="full_Sentence()">Click Here for Sentence.</button>
+
+        <p id="Slice"></p>
+        <button onclick="slice_Method()"> Click Here</button>
+
+        <script> 
+            function func() { //toUpperCase 
+                var str = 'this is an example of touppercase!!';
+                var string = str.toUpperCase();
+                document.write(string);
+            }
+            func();
+        </script>
+
+       
+<script> //search method
+    var string = "search_Method";
+
+    var re1 = /G/;
+    var re2 = /e/;
+    var re3 = /s/;
+    document.write(string.search(re1) + "<br>");
+    document.write(string.search(re2) + "<br>");
+    document.write(string.search(re3));
+  </script>
+
+<p id= "Numbers_to_string"></p>
+        <button onclick="string_Method()">CLick here for String method</button>
+
+<p id="Precision"></p>
+<button onclick="precision_Method()">Click here!!!</button>
+
+<script type="text/javascript"> // fixed() method 
+    var test=213.73145;
+    document.write(test.toFixed(1));          
+</script>
+
+
+<p id="Hi"></p> 
+
+<script> // value of method
+let text = "Hello Oregon!";
+let result = text.valueOf();
+
+document.getElementById("Hi").innerHTML = result;
+</script>
+
+
+
+
+    </body>
+</head>
+</html>

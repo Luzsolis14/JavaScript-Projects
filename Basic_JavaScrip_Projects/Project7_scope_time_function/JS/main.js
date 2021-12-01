@@ -8,7 +8,7 @@ if (1<2) {
     document.write( "the left number is smaller that the one on the right.")
 }
 
-function Age_Function() {. // age function 
+function Age_Function() { // age function 
     Age = document.getElementById("Age").value;
     if (Age >= 18) {
         Vote = "You are old enough to vote";
