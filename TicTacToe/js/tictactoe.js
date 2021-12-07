@@ -2,14 +2,14 @@ let activePlayer = 'X'; //this variable will keep track of whose turn it is
 let selectedSquares = [];
 function placeXOrO(squareNumber) {
     if (!selectedSquares.some(element => element.includes(squareNumber))) {
-        let select = document.getElementById (squareNumber);
+        let select = document.getElementById(squareNumber);
         if (activePlayer ==='X') {
-            select.style.backgroundImage = 'url ("images/x.png")';
+            select.style.backgroundImage='url("images/1x.png")';
         } else {
-            select.style.backgroundImage = 'url ("images/o.png")';
+            select.style.backgroundImage='url("images/o5.png")';
         }
         selectedSquares.push(squareNumber + activePlayer);
-        checkWinConditions ();
+        checkWinConditions();
         if (activePlayer === 'X') {
             activePlayer = 'O' ;
         } else {
@@ -17,7 +17,7 @@ function placeXOrO(squareNumber) {
         }
 
 
-        audio('./media/place.mp3');
+        audio('./media/place_new.mp3');
         if(activePlayer === 'O') {
             disableClick() ;
             setTimeout(function () { computersTurn(); }, 1000)
@@ -27,7 +27,7 @@ function placeXOrO(squareNumber) {
     function computersTurn() {
         let success = false ;
         let pickASquare;
-        while (!success) {
+        while(!success) {
             pickASquare = String(Math.floor(Math.random()*9));
             if (placeXOrO(pickASquare)){
                 placeXOrO(pickASquare);
@@ -57,7 +57,7 @@ else if (arrayIncludes('2X','5X' ,'8X')) {drawWinLine(508,50,508,558)}
 
 else if (arrayIncludes('6X','4X' ,'2X')) {drawWinLine(100,508,510,90)}
 
-else if (arrayIncludes('OX','4X' ,'8X')) {drawWinLine(100,100,520,520)}
+else if (arrayIncludes('OX', '4X','8X')) {drawWinLine(100,100,520,520)}
 
 else if (arrayIncludes('00','10' ,'20')) {drawWinLine(50,100,558,100)}
 
@@ -67,9 +67,9 @@ else if (arrayIncludes('60','70' ,'80')) {drawWinLine(50,508,558,508)}
 
 else if (arrayIncludes('00','30' ,'60')) {drawWinLine(100,50,100,558)}	
 
-else if (arrayIncludes('10','40','70'))	{drawWinLine(304,50,304,558)}
+else if (arrayIncludes('10','40','70'))	{drawWinLine(304, 50, 304, 558)}
 
-else if (arrayIncludes('20','50' ,'80')) {drawWinLine(508,50,508,558)}
+else if (arrayIncludes('20','50' ,'80')) {drawWinLine(508, 50, 508, 558)}
 
 else if (arrayIncludes('60','40' ,'20')) {drawWinLine(100,508,510,90)}
 
@@ -78,8 +78,8 @@ else if (arrayIncludes('00','40','80')) {drawWinLine(100,100,520,520)}
 //squares are selected the code executes.
 else if (selectedSquares.length >= 9) {
 //This function playes the tie game sound.
-audio('./media/tie.mp3');
-setTimeout(function () {resetGame();},1000)
+audio('./media/tie_new.mp3');
+setTimeout(function () { resetGame();},1000)
 }
 
 function arrayIncludes(squareA, squareB, squareC) {
@@ -98,7 +98,7 @@ function disableClick() {
     //This makes our body unclickable.
     body.style.pointerEvents = 'none';
     //This makes our body clickable again after 1 second.
-    setTimeout(function() {body.style.pointerEvents = 'auto';}, 100);
+    setTimeout(function() {body.style.pointerEvents = 'auto';}, 1000);
     }
     //This function takes a string parameter of the path you set earlier for
     //placement sound ('./media/place.mp3')
@@ -177,7 +177,7 @@ function clear() {
 //This line disallows clicking while the win sound is playing
     disableClick();
 //This line plays the win sounds.
-    audio('./media/winGame.mp3');
+    audio('./media/winGame_new.mp3');
 //This line calls our main animation loop. 
     animateLineDrawing();
 //This line waits 1 second. Then, clears canvas, resets game, and allows clicking again. 
