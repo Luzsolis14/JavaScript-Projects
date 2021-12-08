@@ -39,4 +39,21 @@
     margin:10px Opx Opx 100px; 
     width:100px;
     height:40px
-    }
+}
+body {
+    background: rgb(247, 225, 28)
+}
+
+h1 {
+    Color: rgb(165, 8, 8);
+    font-family: fantasy;
+}
+h3 {
+    Color: rgb(59, 2, 2);
+    font-family:Georgia, 'Times New Roman', Times, serif
+}
+div {
+    color:teal;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+ 
