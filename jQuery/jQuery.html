@@ -5,10 +5,10 @@
     </head>
 
     <script>
-        $(document).ready(function() { 
+        $(document).ready(function() {
             $("html").append(
                 "<body>\
-                    <div id='container'>\ 
+                    <div id='container'>\
                         <div id='inner'>\
                             <h1>Basic jQuery </h1>\
                             <p id='1'> Paragraph 1 </p>\
@@ -16,9 +16,9 @@
                             <p id='3'> Paragraph 3</p>\
                         </div>\
                     </div>\
-                </body>\                
+                </body>\
             );
-            $("#2").css(("color":"red"));
+            $("#2").css({"color":"red"});
             $("#3").click(function() {
                 $('h1').hide();
             });
